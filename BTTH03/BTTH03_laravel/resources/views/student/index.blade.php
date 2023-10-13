@@ -7,7 +7,7 @@
         <th scope="col">Họ tên</th>
         <th scope="col">Email</th>
         <th scope="col">Số điện thoại</th>
-        <th scope="col">Mã lớp</th>
+        <th scope="col">Lớp</th>
         <th scope="col">Chỉnh sửa</th>
         <th scope="col">Xoá</th>
       </tr>
@@ -19,7 +19,7 @@
                 <td>{{$item->name}}</td>
                 <td>{{$item->email}}</td>
                 <td>{{$item->phone_number}}</td>
-                <td>{{$item->myclass_id}}</td>
+                <td>{{$item->myClass->name_class}}</td>
                 <td ><a href="#"><i class="fa-solid fa-user-pen"></i></a></td>
                 <td ><a href=""><i class=" delete fa-solid fa-trash"></i></a></td>
             </tr>
