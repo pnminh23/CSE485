@@ -1,0 +1,9 @@
+.table{
+    width: 70%;
+}
+.table tr td,th{
+    text-align: center;
+}
+td a .delete{
+    color: #dc3545;
+}
