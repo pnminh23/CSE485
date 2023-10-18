@@ -15,7 +15,7 @@ class StudentController extends Controller
     {
         //
         $students = Student::with('myClass')->get();
-        return view('student.index',compact('students'));
+        return view('students.index',compact('students'));
     }
 
     /**

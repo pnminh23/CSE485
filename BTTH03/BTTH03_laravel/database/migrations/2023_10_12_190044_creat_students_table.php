@@ -12,13 +12,14 @@ return new class extends Migration
     public function up(): void
     {
         //
+        Schema::dropIfExists('students');
         Schema::create('students',function(Blueprint $table){
             $table->id();
             $table->string("name");
             $table->string("email");
             $table->string("phone_number");
             $table->unsignedBigInteger('myclass_id');
-            $table->foreign('myclass_id')->references('id')->on('myclasses');
+            $table->foreign('myclass_id')->references('id')->on('myclasses')->onDelete('cascade')->onUpdate('cascade');
            
         });
     }

@@ -17,6 +17,7 @@
     {{-- Body --}}
     @include('layout.body')
     {{-- end Body --}}
-    <script src="/bootstrap/js/bootstrap.bundel.js"></script>
+    <script src="/bootstrap/js/bootstrap.bundle.js"></script>
+    
 </body>
 </html>

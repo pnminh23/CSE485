@@ -12,6 +12,7 @@ return new class extends Migration
     public function up(): void
     {
         //
+        Schema::dropIfExists('myclasses');
         Schema::create('myclasses',function(Blueprint $table){
             $table->id();
             $table->string("name_class");

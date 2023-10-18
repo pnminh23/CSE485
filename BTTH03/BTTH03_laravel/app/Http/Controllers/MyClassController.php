@@ -15,7 +15,7 @@ class MyClassController extends Controller
     {
         //
         $myClasses = MyClass::all();
-        return view('myclass.index',compact('myClasses'));
+        return view('myclasses.index',compact('myClasses'));
     }
 
     /**
@@ -61,8 +61,11 @@ class MyClassController extends Controller
     /**
      * Remove the specified resource from storage.
      */
-    public function destroy(string $id)
+    public function destroy(MyClass $myClass)
     {
         //
+        $myClass->delete();
+        return redirect()->route('myClasses.index')->with('success','Class delete successfully');
+
     }
 }
